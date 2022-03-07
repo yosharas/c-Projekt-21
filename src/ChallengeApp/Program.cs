@@ -7,9 +7,9 @@ namespace ChallengeApp
     {
         static void Main(string[] args)
         {
-            var exp1 = new Expense("kawa", 2100.0, new DateTime(2022, 12, 22), "Food");
-            var exp2 = new Expense("n2", 1400.0, new DateTime(2022, 5, 22), "Bills");
-            var exp3 = new Expense("n3", 6000, new DateTime(2022, 2, 19), "Bills");
+            var exp1 = new StandardExpense("kawa", 2100.0, new DateTime(2022, 12, 22), "Food");
+            var exp2 = new StandardExpense("n2", 1400.0, new DateTime(2022, 5, 22), "Bills");
+            var exp3 = new StandardExpense("n3", 6000, new DateTime(2022, 2, 19), "Bills");
 
             exp1.Name = "n1";
             exp3.Name = exp2.Name;
@@ -22,10 +22,10 @@ namespace ChallengeApp
             Console.WriteLine($"sn - {exp3.ID}");
 
 
-            var explist = new Expenses();
-            explist.AddValues(exp1);
-            explist.AddValues(exp2);
-            explist.AddValues(exp3);
+            var explist = new ListOfStandardExpenses();
+            explist.AddExpenseToList(exp1);
+            explist.AddExpenseToList(exp2);
+            explist.AddExpenseToList(exp3);
 
             explist.getStats();
 

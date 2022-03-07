@@ -1,15 +1,33 @@
 using System;
 using System.Collections.Generic;   // dodać aby móc używać LIST
+using System.IO;
 
 namespace ChallengeApp
 {
-    public class Expenses
-    {
-        public List<Expense> ExpensesList = new List<Expense>();
+    // public interface IListOfExpenses
+    // {
+    // Statistics getStats();
+    // void AddExpenseToList(Expense expense);
+    // }
+    // public class ListOfExeptionalExpenses : IListOfExpenses
+    // {
+    // public void AddExpenseToList()
+    // {
+    // throw new NotImplementedException();
+    // }
 
-        public void AddValues(Expense expense)
+    // public Statistics getStats()
+    // {
+    // throw new NotImplementedException();
+    // }
+    // }
+    public class ListOfStandardExpenses
+    {
+        public List<Expense> ListOfExpenses = new List<Expense>();
+
+        public void AddExpenseToList(StandardExpense expense)
         {
-            this.ExpensesList.Add(expense);
+            this.ListOfExpenses.Add(expense);
         }
         public Statistics getStats()
         {
@@ -20,13 +38,14 @@ namespace ChallengeApp
             result.High = double.MinValue;
             result.Low = double.MaxValue;
 
-            foreach (var expense in this.ExpensesList)
+            foreach (var expense in this.ListOfExpenses)
             {
                 result.Low = Math.Min(result.Low, expense.Value);
                 result.High = Math.Max(result.High, expense.Value);
                 result.Sum += expense.Value;
             }
-            result.Avg = result.Sum / this.ExpensesList.Count;
+            
+            result.Avg = result.Sum / this.ListOfExpenses.Count;
 
             Console.WriteLine("Najniższa ocena to " + result.Low.ToString("N2"));
             Console.WriteLine("Najwyższa ocena to " + result.High.ToString("N2"));

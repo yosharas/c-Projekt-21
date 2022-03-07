@@ -14,7 +14,7 @@ namespace ChallengeApp
             MonthlyCategoryBudget = Bills.MonthlyCategoryBudget + Food.MonthlyCategoryBudget + Pleasures.MonthlyCategoryBudget;
         }
 
-        public override bool IsSingleExpenseExceedingMonthlyBudget(Expense expense)
+        public override bool IsSingleExpenseExceedingMonthlyBudget(StandardExpense expense)
         {
             return expense.Value > MonthlyCategoryBudget;
         }

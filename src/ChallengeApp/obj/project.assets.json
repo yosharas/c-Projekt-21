@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yosha\\c#Projekt 21\\Src\\ChallengeApp\\ChallengeApp.csproj",
+      "projectUniqueName": "C:\\Users\\yosha\\c-Projekt-21\\Src\\ChallengeApp\\ChallengeApp.csproj",
       "projectName": "ChallengeApp",
-      "projectPath": "C:\\Users\\yosha\\c#Projekt 21\\Src\\ChallengeApp\\ChallengeApp.csproj",
+      "projectPath": "C:\\Users\\yosha\\c-Projekt-21\\Src\\ChallengeApp\\ChallengeApp.csproj",
       "packagesPath": "C:\\Users\\yosha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\yosha\\c#Projekt 21\\Src\\ChallengeApp\\obj\\",
+      "outputPath": "C:\\Users\\yosha\\c-Projekt-21\\Src\\ChallengeApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\yosha\\AppData\\Roaming\\NuGet\\NuGet.Config",
